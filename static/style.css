@@ -1,0 +1,16 @@
+
+html {
+    min-height: 101%;
+}
+
+body {
+    background-color: #ad1717;
+    color: #3a3a3a;
+    margin-top: 2em;
+    
+}
+
+h1, h2, h3 {
+    color: #888888
+
+}
