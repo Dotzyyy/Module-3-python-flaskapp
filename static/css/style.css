@@ -1,16 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 html {
     min-height: 101%;
 }
 
 body {
+    font-family:'Roboto', Arial, Helvetica, sans-serif;
     background-color: #FAFAFA;
+    background-size: cover;
     color: #3a3a3aa3;
+    margin-top: 0;
+    height: 130vh;
     margin-top: 2em;
+    padding: 2em;
+    position: relative;
+    
     
 }
-
 h1, h2, h3 {
     color: #888888
 
 }
+
+aside {
+    margin-top: 2em;
+}
+
+
+
+article {
+    margin: 2em;
+    
+}
+
+/* Navigation and Header CSS */
+
+header {
+    background-color: rgb(184, 233, 237);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4em;
+    align-items: center;
+    display: flex;
+}
+
+header * {
+    display: inline;
+}
+
+nav > ul > li {
+    margin: 2em;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links:hover {
+    color: #888888;
+    background-color: aqua;
+    text-decoration: none;
+    size: 100%;
+}
+
+.show-bar {
+    height: auto;
+    overflow:auto;
+}
+
+@media (min-width: 32em) {
+    .nav-btn {
+        display: none;
+    }
+}
+
+
