@@ -1,5 +1,10 @@
 {% extends "base.html" %}
     {% block content %}
+      <div> <h1>Welcome!</h1>
+            <p> 
+              If you are new, consider or signing up or learning more <a id="scroll-down" type="button">about us</a>.
+            </p>
+        </div>    
         {% for post in posts %}
         <article class="media content-section">
             <div class="media-body">
@@ -12,4 +17,16 @@
             </div>
           </article>
         {% endfor %}
+
+        <div id="about-mini">
+          <h2>About Us</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+          </p>
+          <p><a href="/about">Read More</a></p>
+
+        </div>
     {% endblock  %}   

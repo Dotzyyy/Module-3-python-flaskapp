@@ -5,19 +5,42 @@ html {
     min-height: 101%;
 }
 
+:root{
+    --primary-color: #FAFAFA;
+    --secondary-color: #ADD8E6;
+    --text-color: #3a3a3aa3; 
+
+    
+}
+.dark-mode {
+    --primary-color: #151128;
+    --secondary-color: #053c4f84;
+    --text-color: #ffffff;
+}
+
+
 body {
     font-family:'Roboto', Arial, Helvetica, sans-serif;
-    background-color: #FAFAFA;
+    background-color: var(--primary-color);
     background-size: cover;
-    color: #3a3a3aa3;
+    color: var(--text-color);
     margin-top: 0;
-    height: 130vh;
-    margin-top: 2em;
+    height: 200vh;
+    margin-top: 4rem;
     padding: 2em;
     position: relative;
     
     
 }
+
+.dark-mode {
+    background-color: #151128;
+    color: #ffffffa3;
+}
+
+
+
+
 h1, h2, h3 {
     color: #888888
 
@@ -37,46 +60,179 @@ article {
 /* Navigation and Header CSS */
 
 header {
-    background-color: rgb(184, 233, 237);
+    background-color: var(--secondary-color);
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 4em;
+    height: 5rem;
     align-items: center;
     display: flex;
+    padding: 1rem;
+    size: 100%;
+   
 }
 
 header * {
     display: inline;
+    
+    
 }
 
-nav > ul > li {
-    margin: 2em;
+#site-title {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 3rem;
+    
 }
+
+.nav-btn {
+    display: none;
+}
+
+.nav-bar {
+    margin-left: 8em;
+    
+}
+
+.nav-bar > ul {
+    display: flex;
+}
+
+
 
 .nav-links {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
+    padding: 2em;
+    font-weight: 500;
+    
 }
 
-.nav-links:hover {
+
+
+.nav-bar  > li > a:hover {
     color: #888888;
     background-color: aqua;
     text-decoration: none;
     size: 100%;
 }
 
-.show-bar {
-    height: auto;
-    overflow:auto;
+.navbar.active {
+
 }
 
-@media (min-width: 32em) {
-    .nav-btn {
-        display: none;
+@media (max-width: 80rem) {
+    header {
+        padding: 0 3rem;
     }
+}
+
+@media (max-width: 60rem) {
+    header {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 55rem ) {
+    .nav-btn {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-btn .line {
+        width: 3rem;
+        height: 0.25rem;
+        background-color: white;
+        margin: 0.40rem 0;
+    }
+    .nav {
+        height: 30rem;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: black;
+        transition: 0.5s;S
+    }
+}
+
+
+
+
+#color-icon {
+    width: 2em;
+    cursor: pointer;
+}
+
+/* About Page */
+
+
+
+#faq-section {
+    
+    margin-top: 3rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#faq-title {
+    font-size: 2.5rem;
+    margin: auto;
+}
+
+.faq {
+    cursor: pointer;
+    max-width: 45rem;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid grey;
+    
+
+}
+
+.question-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.question-title {
+    padding-top: 1.75rem;
+    line-height: 1.6;
+}
+/* Tried display: hidden but it made the containers shorter  */
+.answer-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+
+
+.answer {
+    padding-top: 1.2rem;
+    font-size: 1rem ;
+    line-height: 1.6;
+}
+
+.faq.active .answer-container {
+    max-height: 20rem;
+    
+
+}
+
+.faq.active .question-container svg {
+    transform: rotate(180deg);
+}
+
+svg {
+    transition: transform 0.5s ease-in;
 }
 
 
