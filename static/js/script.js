@@ -1,8 +1,6 @@
 
 
 
-
-
 // Collapse section
   let faqs = document.querySelectorAll(".faq");
 
@@ -19,15 +17,17 @@
 
   // Dark mode
 
-  let colorIcon = document.getElementById("color-icon")
+  const colorIcon = document.getElementById("color-icon")
+
+
   
 
   colorIcon.addEventListener("click", function(){
     document.body.classList.toggle("dark-mode");
     if(document.body.classList.contains("dark-mode")) {
-      colorIcon.src = "{{url_for('static', filename='sun.png')}}"
+      colorIcon.src = "static/sun.png"
     } else{
-      colorIcon.src = "{{url_for('static', filename='moon.png')}}"
+      colorIcon.src = "static/moon.png"
     }
   });
       
@@ -43,19 +43,4 @@ scrollDown.addEventListener("click", function() {
     
 });
 
-// Collapsing nav-bar code
 
-let navBtn = document.querySelector(".nav-btn");
-
-let navBar = document.querySelector(".nav-bar");
-
-navBtn.addEventListener("click", function() {
-    if (navBar.classList.contains("show-bar")) {
-        navBar.classList.remove("show-bar");
-    }
-    else{
-        navBar.classList.add("show-bar");
-    }
-
-
-}); 

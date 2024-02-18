@@ -2,10 +2,11 @@
 <html>
     <head>
           <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
           <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
@@ -17,30 +18,43 @@
    
 
     </head>
-    <body>
+    <body class="">
         <header>
+          <!-- Navigation bar-->
+          <nav class="navbar navbar-expand-lg  fixed-top">
+            <div class="container">
+              <!-- Website title-->
+              <a href="/"><h1>Flask Project</h1></a>
+
+              <!--Hidden Button-->
+              <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
             
-                
-              <h1 id="site-title">Flask</h1>
-                <div class="nav-btn">
-                  <div class="line"></div>
-                  <div class="line"></div>
-                  <div class="line"></div>
-                </div>
-                <nav>
-                    <ul class="nav-bar">
-                        
-                        <li><a class="nav-links" href="/">Home</a></li>
-                        <li><a class="nav-links" href="/about">About</a></li>
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <!-- Main navbar section-->
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                      <ul class="navbar-nav">
+                              
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                       
-                        <!-- Account Login/ Sign up sidebar -->
-                     
-                        <li><a class="nav-links" href="/login">Login</a></li>
-                        <li><a class="nav-links" href="/registration">Sign Up</a></li>
+                        <!-- Account Login/ Sign up -->
+                      
+                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/registration">Sign Up</a></li>
+                        <li ><img src="{{url_for('static', filename='moon.png')}}" id="color-icon" alt="color-icon"></li>
                     </ul>
                     
-                    <img src="{{url_for('static', filename='moon.png')}}" id="color-icon" alt="color-icon">
-            </nav>
+                  </div>
+                </div>
+              </div>
+          </nav> 
 
             
         </header>
@@ -63,8 +77,8 @@
               </div>
               <aside class="col-md-4">
                 <div class="content-section">
-                  <h3>Sidebar</h3>
-                  <p class='text-muted'>You can put any information here you'd like.
+                  <h3>Side Menu</h3>
+                  <p class='text-muted'> Discover more
                     <ul class="list-group">
                       <li class="list-group-item list-group-item-light">Latest Posts</li>
                       <li class="list-group-item list-group-item-light">Announcements</li>
@@ -82,10 +96,13 @@
         <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
-    </body>
+  </body>
     <footer>
       <p>&copy;David Sexton 2023</p>
       
     </footer>
 </html>
+
+
