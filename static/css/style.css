@@ -2,7 +2,7 @@
 
 
 html {
-    min-height: 101%;
+    height: 101%;
     
 }
 
@@ -11,6 +11,7 @@ html {
     --secondary-color: #ADD8E6;
     --text-color: #3a3a3aa3; 
     --heading-color: #888888;
+    --link-color: blue;
     
 }
 .dark-mode {
@@ -18,7 +19,7 @@ html {
     --secondary-color: #053d4f;
     --text-color: #ffffff;
     --heading-color:#cbcbcb;
-    
+    --link-color: cyan;
 }
 
 
@@ -82,21 +83,26 @@ aside {
 nav {
     background-color: var(--secondary-color);
     margin: 0;
-    padding: 0;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    overflow: auto;
+    text-align: left;
 }
 
 
 
 li {
     list-style: none;
-    height: 3rem;
+    height: 100%;
 }
 
 a {
     text-decoration: none;
+    color: var(--link-color);
+    
 }
 
 
@@ -104,21 +110,26 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .nav-item {
-    margin-left:  5rem;
+    padding-left: 5rem;
+    height: 100%;
+    
+}
 
+.nav-link {
+    color: var(--text-color);
 }
 
 
-
-
 .nav-link:hover {
-    background-color: #9e99b5;
+    color: #000000;
+    background-color: #ffffff;
     height: 100%;
     width: 100%;
-    
+    border-radius: 1rem;
     
     
     
@@ -135,6 +146,10 @@ a {
     
     margin-left: 4.5rem;
     
+}
+
+aside div p ul {
+    background-color: #000000;
 }
 
 
@@ -175,6 +190,26 @@ a {
     cursor: pointer;
 }
 
+
+/* Index Page */
+
+
+
+.text-muted {
+    color: var(--text-color);
+}
+
+#scroll-down {
+    color: var(--link-color);
+}
+
+
+
+
+
+
+
+
 /* About Page */
 
 
@@ -182,6 +217,7 @@ a {
 #faq-section {
     
     margin-top: 3rem;
+    margin-bottom: 15rem;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -245,3 +281,26 @@ svg {
 }
 
 
+/* Forms */
+
+.form-bottom {
+    margin-bottom: 37rem;
+}
+
+@media (max-width: 110rem) {
+    .form-bottom {
+        margin-bottom: 28rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .form-bottom {
+        margin-bottom: auto;
+    }
+}
+
+
+.side-bar {
+    background-color: #053d4f;
+    color: chocolate;
+}
