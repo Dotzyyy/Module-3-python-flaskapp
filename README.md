@@ -9,21 +9,21 @@ This app was made to act as an online blog where users can register for an accou
 
 Featured Languages:
 
-    *HTML5
+    * HTML5
 
-    *CSS3
+    * CSS3
 
-    *JavaScript
+    * JavaScript
 
-    *Python3
+    * Python3
 
 Featured Technologies:
 
-    *Bootstrap 
+    * Bootstrap 
 
-    *Flask
+    * Flask
 
-    *Render (For deploying the app)
+    * Render (For deploying the app)
 
 
 ### Future Updates
