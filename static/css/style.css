@@ -153,6 +153,14 @@ aside div p ul {
 }
 
 
+.sidebar {
+    background-color: var(--secondary-color);
+}
+
+.side-menu {
+    background-color: #053d4f;
+}
+
 /* media querys */
 
 @media (max-width: 80rem) {
@@ -201,6 +209,7 @@ aside div p ul {
 
 #scroll-down {
     color: var(--link-color);
+    cursor: pointer;
 }
 
 
